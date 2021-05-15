@@ -13,7 +13,7 @@ export class ProductService {
   product: Product;
   productList: Product[] = [];
   productData$ = new BehaviorSubject<Product[]>(this.productList);
-  private PRODUCT_SERVICE_BASE_URL = 'http://localhost:4200/assets/DataBase/';
+  private PRODUCT_SERVICE_BASE_URL = '/assets/DataBase/';
 
   constructor(private readonly http: HttpClient) { }
 
