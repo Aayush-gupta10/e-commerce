@@ -1,0 +1,92 @@
+<div class="container mt-3">
+  <div class="col-md">
+    <div class="section-title">
+      <h3 class="title">{{'CHECKOUT.SHIPPINGDETAILS' | translate}}</h3>
+    </div>
+    <form [formGroup]="shippingform" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstname">{{'CHECKOUT.FIRSTNAME' | translate}}</label>
+        <input type="text" class="form-control" id="firstname" formControlName="firstname" required [ngClass]="getControlValidationClasses(shippingform.controls.firstname)">
+        <div class="invalid-feedback" *ngIf="shippingform.controls.firstname.touched && shippingform.controls.firstname.errors?.required">
+          {{'Errors.REQUIRED' | translate}}
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="lastname">{{'CHECKOUT.TOTAL' | translate}}</label>
+        <input type="text" class="form-control" id="lastname" formControlName="lastname" required [ngClass]="getControlValidationClasses(shippingform.controls.lastname)">
+        <div class="invalid-feedback" *ngIf="shippingform.controls.lastname.touched && shippingform.controls.lastname.errors?.required">
+          {{'Errors.REQUIRED' | translate}}
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="email">{{'CHECKOUT.EMAIL' | translate}}</label>
+        <input type="email" class="form-control" id="email" formControlName="email" required [ngClass]="getControlValidationClasses(shippingform.controls.email)">
+        <div class="invalid-feedback" *ngIf="shippingform.controls.email.touched && shippingform.controls.email.errors?.required">
+          {{'Errors.REQUIRED' | translate}}
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="address">{{'CHECKOUT.ADDRESS' | translate}}</label>
+          <input type="text" class="form-control" id="address" formControlName="address" required [ngClass]="getControlValidationClasses(shippingform.controls.address)">
+          <div class="invalid-feedback" *ngIf="shippingform.controls.address.touched && shippingform.controls.address.errors?.required">
+            {{'Errors.REQUIRED' | translate}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="city">{{'CHECKOUT.CITY' | translate}}</label>
+        <input type="text" class="form-control" id="city" formControlName="city" required [ngClass]="getControlValidationClasses(shippingform.controls.city)">
+        <div class="invalid-feedback" *ngIf="shippingform.controls.city.touched && shippingform.controls.city.errors?.required">
+          {{'Errors.REQUIRED' | translate}}
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="country">{{'CHECKOUT.COUNTRY' | translate}}</label>
+        <input type="text" class="form-control" id="country" formControlName="country" required [ngClass]="getControlValidationClasses(shippingform.controls.country)">
+        <div class="invalid-feedback" *ngIf="shippingform.controls.country.touched && shippingform.controls.country.errors?.required">
+          {{'Errors.REQUIRED' | translate}}
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="zipcode">{{'CHECKOUT.ZIPCODE' | translate}}</label>
+        <input type="text" class="form-control" id="zipcode" formControlName="zipcode" required [ngClass]="getControlValidationClasses(shippingform.controls.zipcode)">
+        <div class="invalid-feedback" *ngIf="shippingform.controls.zipcode.touched && shippingform.controls.zipcode.errors?.required">
+          {{'Errors.REQUIRED' | translate}}
+      </div>
+      <div class="invalid-feedback" *ngIf="shippingform.controls.zipcode.touched && shippingform.controls.zipcode.errors?.pattern ">
+        {{'Errors.ZIPCODE' | translate}}
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="telephone">{{'CHECKOUT.TELEPHONE' | translate}}</label>
+        <input type="text" class="form-control" id="telephone" formControlName="telephone" required [ngClass]="getControlValidationClasses(shippingform.controls.telephone)">
+        <div class="invalid-feedback" *ngIf="shippingform.controls.telephone.touched && shippingform.controls.telephone.errors?.required">
+          {{'Errors.REQUIRED' | translate}}
+      </div>
+      <div class="invalid-feedback" *ngIf="shippingform.controls.telephone.touched && shippingform.controls.telephone.errors?.pattern  ">
+        {{'Errors.TELEPHONE' | translate}}
+      </div>
+      </div>
+      <hr class="mb-4" />
+      <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal" [disabled]="!shippingform.valid" type="submit" >
+        {{'CHECKOUT.PLACEORDER' | translate}}
+      </button>
+    </form>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{'CHECKOUT.ORDERSPLACEDSUCCESSFULLY' | translate}}</h5>
+        </div>
+        <div class="modal-body">
+            <h5>{{'CHECKOUT.TOTALITEM' | translate}} {{checkoutProducts.data.length}}</h5>
+            <h5>{{'CHECKOUT.TOTALAMOUNT' | translate}}: {{checkoutTotal | currency: ('CURRENCY.VALUE' | translate)}}</h5>
+            <p>{{'CHECKOUT.THANKYOU' | translate}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal"  (click) = orderPlaced()>Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

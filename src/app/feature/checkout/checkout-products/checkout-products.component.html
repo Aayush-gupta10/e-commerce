@@ -1,0 +1,47 @@
+<div class="container">
+  <div *ngIf="checkoutProducts.data[0].numInCart === 0;" class="text-center my-5">
+    <h4>{{'CHECKOUT.CARTEMPTY' | translate}}</h4>
+    <button class="btn btn-primary btn-lg mt-3" routerLink="/home/product">{{'CHECKOUT.SHOP' | translate}}</button>
+  </div>
+  <ul class="list-group mb-3" *ngIf="checkoutProducts.data[0].numInCart > 0;">
+    <!-- <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let c of checkoutProducts.data">
+      <div>
+        <img [src]="c.product.image" [alt]="c.product.title" width="150" height="100" />
+      </div>
+      <div style="padding: 10px;">
+        <h6 class="my-0">{{ c.product.title }}</h6>
+
+      </div>
+      <span class="text-muted" >{{ c.product.price * c.numInCart | currency: ('CURRENCY.VALUE' | translate)}}</span>
+    </li> -->
+    <table class="table table-bordered">
+      <tbody>
+        <tr *ngFor="let c of checkoutProducts.data">
+          <td><img [src]="c.product.image" [alt]="c.product.title" width="150" height="100" /></td>
+          <td>
+            <h6>{{ c.product.title }}</h6>
+          </td>
+          <td style="text-align: center;"><span class="text">{{c.numInCart}} * {{c.product.price | currency: ('CURRENCY.VALUE' | translate)}} </span></td>
+        </tr>
+      </tbody>
+    </table>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-10">
+          <span>
+            <h6>{{'CHECKOUT.TOTAL' | translate}} </h6>
+          </span>
+        </div>
+        <div class="col-2" style="text-align: center;"> 
+          <strong>{{ checkoutTotal | currency: ('CURRENCY.VALUE' | translate)}}</strong>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="row" *ngIf = "checkoutProducts.data[0].numInCart > 0">
+    <div class="col-10"></div>
+    <div class="col-2">
+      <a class="btn btn-primary" routerLink="shippingdetails">{{'CHECKOUT.NEXT' | translate}} </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.qty {
+    font-weight: 400;
+    margin-right: 10px;
+  }
+  .brand-wrap{
+    padding-right: 50px;
+  }
+
+  .qty {
+    position: absolute;
+    right: 2px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #FFF;
+    background-color: #D10024;
+  }
+
+  a.widget-view{
+    padding-right: 30px;
+  }
+  
+  a.brand-wrap{
+    color: white;
+  }
+  .loginlogout{
+    padding-left: 20px;
+  }
+
+  .section-header{
+    background-color: #2199e8;
+    opacity: 1;
+  }

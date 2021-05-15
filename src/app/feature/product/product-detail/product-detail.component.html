@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="product-image">
+          <div>
+            <img
+              src={{product?.image}}
+              [alt]="product?.title"
+              width="100%"
+              class="img-fluid"
+            />
+            
+          </div>
+          <div class="" style="margin-top: 15px;">
+            <ul class="list-group mb-3">
+              <li
+                class="list-group-item d-flex justify-content-between lh-condensed"
+              >
+                <div>
+                  <h6 class="my-0">{{'PRODUCTDETAILS.PRODUCTPRICE' | translate}}</h6>
+                </div>
+                <span class="text-muted" style="color: crimson !important;"
+                  >{{ product?.price | currency: ('CURRENCY.VALUE' | translate)}}</span
+                >
+              </li>
+            </ul>
+                <div class="card-text"><b>{{'PRODUCTDETAILS.QUANTITY' | translate}} </b>
+                  <span (click) = "Decrease()" class="value-button" id="decrease" class= "fa fa-minus"></span>
+                  <span>{{Quantity}}</span>
+                  <span (click) = "Increase()" class="value-button" id="increase" class= "fa fa-plus"></span>
+                  <button (click)="addToCart(product.id)" class="btn btn-primary" ><i
+                    class="fa fa-shopping-cart " ></i>  {{  'PRODUCTDETAILS.ADDTOCART' | translate}}
+                  </button>
+                </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="product-detail">
+          <h5 class="product-head">{{'PRODUCTDETAILS.PRODUCTDETAILS' | translate}}</h5>
+          <table class="table" cellspacing="0" style="max-height: 28px;">
+            <tbody>
+              <tr>
+                <th scope="row">{{'PRODUCTDETAILS.PRODUCTNAME' | translate}}</th>
+                <td>{{ product?.title }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{'PRODUCTDETAILS.PRODUCTDESCRIPTION' | translate}}</th>
+                <td>{{ product?.description }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{'PRODUCTDETAILS.CATEGORY' | translate}}</th>
+                <td>{{ product?.category }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

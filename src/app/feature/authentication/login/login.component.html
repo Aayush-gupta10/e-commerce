@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-4">
+
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <h4 class="admintext">{{'LOGIN.LOGIN' | translate}}</h4>
+        <label for="username">{{'LOGIN.USERNAME' | translate}}</label>
+        <div class="form-group">
+          <input type="text" formControlName="username" placeholder="Username" class="form-control" id="username"
+            required [ngClass]="getControlValidationClasses(loginForm.controls.username)">
+          <div class="invalid-feedback"
+            *ngIf="loginForm.controls.username.touched && loginForm.controls.username.errors?.required">
+            {{'Errors.REQUIRED' | translate}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">{{'LOGIN.PASSWORD' | translate}}</label>
+          <input type="password" id="password" placeholder="Password" formControlName="password" required
+            class="form-control" [ngClass]="getControlValidationClasses(loginForm.controls.password)">
+          <div class="invalid-feedback"
+            *ngIf="loginForm.controls.password.touched && loginForm.controls.password.errors?.required">
+            {{'Errors.REQUIRED' | translate}}
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-bottom: 20px;"
+          [disabled]="!loginForm.valid">{{'LOGIN.SUBMIT' | translate}}</button>
+      </form>
+    </div>
+
+    <div class="col"></div>
+  </div>
+</div>

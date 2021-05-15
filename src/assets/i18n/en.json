@@ -1,0 +1,106 @@
+{
+    "PRODUCTLIST" :{
+        "PRODUCTPRICE" : "Product Price",
+        "ADDTOCART" : "Add to Cart"
+    },
+    "HEADER" :{
+        "CATEGORIES" : "Categories",
+        "ALL" : "All",
+        "FASHION" : "Fashion",
+        "CLOTHING" : "Fashion",
+        "ALLCLOTHING" : "All Fashion",
+        "MEN" : "Men",
+        "WOMEN" : "Women",
+        "ACCESSORIES" : "Accessories",
+        "ELECTRONICS" : "Electronics",
+        "ALLELECTRONICS" : "All ELectronics",
+        "MOBILE" : "Mobile",
+        "LAPTOP" : "Laptop", 
+        "FOOD": "Food",
+        "FRUIT" : "Fruit",
+        "BAKERY": "Bakery",
+        "AllFOOD": "All Food",
+        "SEARCH" : "Search", 
+        "MYPROFILE": "My Profile",
+        "CART" : "Cart",
+        "LOGIN" : "Login",
+        "LOGOUT" : "Logout"
+    },
+    "PRODUCTDETAILS" : {
+        "PRODUCTDETAILS" : "Product Details",
+        "PRODUCTNAME" : "Product Name",
+        "PRODUCTDESCRIPTION" : "Product Description",
+        "PRODUCTPRICE" : "Product Price",
+        "QUANTITY" : "Quantity",
+        "ADDTOCART" : "Add to Cart",
+        "CATEGORY" : "Category"
+    },
+    "CART" : {
+        "QUANTITY" : "Quantity",
+        "PRICEPERITEM" : "Price/Item",
+        "TOTALPRICE" : "Total Price",
+        "YOURCART": "Your Cart",
+        "CONTINUESHOPPING": "Continue Shopping",
+        "CHECKOUT" : "Checkout",
+        "TOTAL" : "Total"
+    },
+    "CHECKOUT" : {
+        "TOTAL" : "Total",
+        "NEXT" : "Add Shipping Details",
+        "FIRSTNAME" : "First Name",
+        "LASTNAME" : "Last Name",
+        "ADDRESS" : "Adderess",
+        "EMAIL" : "Email",
+        "CITY" : "City",
+        "COUNTRY" : "Country",
+        "ZIPCODE" : "Zip Code",
+        "TELEPHONE" : "Telephone",
+        "PLACEORDER" : "Place Order",
+        "ORDERSPLACEDSUCCESSFULLY" : "Order Placed Successfully!",
+        "TOTALITEM" : "Total Items",
+        "TOTALAMOUNT" : "Total Amount to be paid",
+        "THANKYOU" : "Thank You visit again!",
+        "HOME" : "Home",
+        "CARTEMPTY" : "Your Cart is Empty",
+        "SHOP" : "Go To Shop",
+        "SHIPPINGDETAILS"  : "Shipping Details"
+    },
+    "LOGIN" : 
+    {
+        "LOGIN": "Login",
+        "USERNAME" : "User Name",
+        "PASSWORD" : "Password",
+        "SUBMIT" : "Submit"
+    },
+    "Errors": {
+       "REQUIRED": "This field is required",
+       "ZIPCODE": "zip code should be of 6 digits",
+       "TELEPHONE": "Phone Number should be of 10 digits"
+
+    },
+    "CURRENCY":{
+        "VALUE" : "USD"
+    },
+    "FOOTER":{
+        "BRANDS": "Brands",
+        "COMPANY": "Company",
+        "HELP" : "Help",
+        "ACCOUNT": "Account",
+        "SOCIAL": "Social",
+        "ABOUTUS" : "About Us", 
+        "CAREER" : "Career",
+        "FINDASTORE" : "Find a Store",
+        "RULESANDTERMS" : "Rules and Terms",
+        "CONTACTUS" : "Contact Us",
+        "MONEYREFUND" : "Money Refund",
+        "ORDERSTATUS" : "Order Status",
+        "SHIPPINGINFO" : "Shipping Info",
+        "USERLOGIN" : "User Login",
+        "USERREGISTER" : "User Register", 
+        "ACCOUNTSETTINGS" : "Account Settings",
+        "MYORDERS" : "My Orders",
+        "BOTTOM" : "2021 Company name, All rights reserved"
+
+    }
+
+  }

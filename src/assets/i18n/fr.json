@@ -1,0 +1,107 @@
+{
+    "PRODUCTLIST" :{
+        "PRODUCTPRICE" : "Prix ​​du produit",
+        "ADDTOCART" : "Ajouter au panier"
+    },
+    "HEADER" :{
+        "CATEGORIES" : "Catégories",
+        "CLOTHING" : "Vêtements",
+        "ALL" : "Toute",
+        "FASHION" : "Mode",
+        "ALLCLOTHING" : "Tous les Mode",
+        "MEN" : "Hommes",
+        "WOMEN" : "Femmes",
+        "ACCESSORIES" : "Accessoires",
+        "ELECTRONICS" : "Électronique",
+        "ALLELECTRONICS" : "Tout l'électronique",
+        "MOBILE" : "Mobile",
+        "LAPTOP" : "Laptop", 
+        "FOOD": "Aliments",
+        "FRUIT" : "Fruit",
+        "BAKERY": "Boulangerie",
+        "AllFOOD": "Tous les aliments",
+        "SEARCH" : "Rechercher", 
+        "MYPROFILE": "Mon profil",
+        "CART" : "Chariot",
+        "LOGIN" : "Connexion",
+        "LOGOUT" : "Se déconnecter"
+    }
+    ,
+    "PRODUCTDETAILS" : {
+        "PRODUCTDETAILS" : "détails du produit",
+        "PRODUCTNAME" : "Nom du produit",
+        "PRODUCTDESCRIPTION" : "Description du produit",
+        "PRODUCTPRICE" : "Prix ​​du produit",
+        "QUANTITY" : "Quantité",
+        "ADDTOCART" : "Ajouter au panier",
+        "CATEGORY" : "CATÉGORIE"
+    },
+    "CART" : {
+        "QUANTITY" : "Quantité",
+        "PRICEPERITEM" : "Prix ​​/ article",
+        "TOTALPRICE" : "Prix ​​total",
+        "YOURCART": "Votre panier",
+        "CONTINUESHOPPING": "Continuer vos achats",
+        "CHECKOUT" : "Vérifier",
+        "TOTAL" : "Le total"
+    },
+    "CHECKOUT" : {
+        "TOTAL" : "Le total",
+        "NEXT" : "Ajouter les détails de livraison",
+        "FIRSTNAME" : "Prénom",
+        "LASTNAME" : "Nom de famille",
+        "ADDRESS" : "Adresse",
+        "EMAIL" : "E-mail",
+        "CITY" : "Ville",
+        "COUNTRY" : "Pays",
+        "ZIPCODE" : "Code postal",
+        "TELEPHONE" : "Téléphone",
+        "PLACEORDER" : "Passer la commande",
+        "ORDERSPLACEDSUCCESSFULLY" : "Commande passée avec succès!",
+        "TOTALITEM" : "Articles au total",
+        "TOTALAMOUNT" : "Montant total à payer",
+        "THANKYOU" : "Merci de visiter à nouveau!",
+        "HOME" : "Home",
+        "CARTEMPTY" : "Votre panier est vide",
+        "SHOP" : "Aller à la boutique",
+        "SHIPPINGDETAILS"  : "Les détails d'expédition"
+    },
+    "LOGIN" : 
+    {
+        "LOGIN": "Connexion",
+        "USERNAME" : "Nom d'utilisateur",
+        "PASSWORD" : "Mot de passe",
+        "SUBMIT" : "nous faire parvenir"
+    },
+    "Errors": {
+        "REQUIRED": "Ce champ est requis",
+        "ZIPCODE": "le code postal doit être composé de 6 chiffres",
+        "TELEPHONE": "Le numéro de téléphone doit être composé de 10 chiffres"
+ 
+     },
+     "CURRENCY":{
+        "VALUE" : "EUR"
+    },
+    "FOOTER":{
+        "BRANDS": "Marques",
+        "COMPANY": "Compagnie",
+        "HELP" : "Aider",
+        "ACCOUNT": "Compte",
+        "SOCIAL": "Sociale",
+        "ABOUTUS" : "À propos de nous", 
+        "CAREER" : "Career",
+        "FINDASTORE" : "Trouver un magasin",
+        "RULESANDTERMS" : "Règles et conditions",
+        "CONTACTUS" : "Nous contacter",
+        "MONEYREFUND" : "Remboursement d'argent",
+        "ORDERSTATUS" : "Statut de la commande",
+        "SHIPPINGINFO" : "Informations d'expéditiono",
+        "USERLOGIN" : "Utilisateur en ligne",
+        "USERREGISTER" : "Registre des utilisateurs", 
+        "ACCOUNTSETTINGS" : "Paramètres du compte",
+        "MYORDERS" : "Mes commandes",
+        "BOTTOM" : "2021 Raison sociale, tous droits réservés"
+
+    }
+
+  }

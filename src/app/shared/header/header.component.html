@@ -1,0 +1,72 @@
+<header class="section-header">
+  <section class="header-main border-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <a routerLink="home/product" class="brand-wrap">
+            <b>E-Mart</b>
+          </a> <!-- brand-wrap.// -->
+        
+          
+        <p-menu [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'" #menu [popup]="true" [model]="items">
+        </p-menu>
+        <button class="btn btn-primary" style="background: white; color: #2199e8;" type="button" pButton icon="pi pi-list" label="Show"
+          (click)="menu.toggle($event)">{{'HEADER.CATEGORIES' | translate}}</button>
+
+          </div>
+        <div class="col-5">
+
+          <form [formGroup]="searchform" (ngSubmit)="onSearch()" class="search-header">
+            <div class="input-group w-100">
+              <select  class="custom-select border-right" formControlName="categoryValue" name="category_name">
+                <option value="All">{{'HEADER.ALL' | translate}}</option>
+                <option value="Fashion">{{'HEADER.FASHION' | translate}}</option>
+                <option value="Electronics">{{'HEADER.ELECTRONICS' | translate}}</option>
+                <option value="Food">{{'HEADER.FOOD' | translate}}</option>
+              </select>
+              <input type="text" class="form-control" formControlName="searchValue" placeholder="Search">
+
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" >
+                  <i class="fa fa-search"></i> {{'HEADER.SEARCH' | translate}}
+                </button>
+              </div>
+            </div>
+          </form> <!-- search-wrap .end// -->
+        </div> <!-- col.// -->
+        <div class="col-1"></div>
+        <div class="col-3 float-md-rigt">
+          <div class="widgets-wrap">
+            <div class="widget-header mr-3">
+              <!-- <a class="widget-view">
+                <div class="icon-area">
+                  <i class="fa fa-user"></i>
+                </div>
+                <small class="text" data-toggle="dropdown"> {{'HEADER.MYPROFILE' | translate}} </small>
+              </a> -->
+            </div>
+            <div class="widget-header">
+              <a routerLink="home/cart" class="widget-view">
+                <div class="icon-area">
+                  <i class="fa fa-shopping-cart" style="color: white;"></i>
+                </div>
+                <small class="text" style="color: white;"> {{'HEADER.CART' | translate}} </small>
+                <div class="qty">{{cartData.data[0].numInCart !== 0 ? productsInCart : 0}}</div>
+              </a>
+            </div>
+            <div class="widget-header">
+              <select #langSelect (change)="translate.use(langSelect.value)">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang"
+                  [selected]="lang === translate.currentLang">{{ lang }}</option>
+              </select>
+            </div>
+            <div class="widget-header loginlogout">
+              <a *ngIf="!isLoggedIn" style="color: white" routerLink="/login" >{{'HEADER.LOGIN' | translate}}</a>
+              <a *ngIf="isLoggedIn" (click)="logout()" style="color: white; cursor: pointer">{{'HEADER.LOGOUT' | translate}}</a>
+            </div>
+          </div> <!-- widgets-wrap.// -->
+        </div> <!-- col.// -->
+      </div> <!-- row.// -->
+    </div> <!-- container.// -->
+  </section> <!-- header-main .// -->
+</header>
