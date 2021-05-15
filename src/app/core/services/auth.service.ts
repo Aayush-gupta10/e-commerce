@@ -22,7 +22,7 @@ export class AuthService {
                 }
               }
 
-    private AUTH_SERVICE_BASE_URL = 'http://localhost:4200/assets/DataBase';
+    private AUTH_SERVICE_BASE_URL = '/assets/DataBase';
 
   login(user: User): Observable<User> {
     const url = `${this.AUTH_SERVICE_BASE_URL}/userDB.json`;
