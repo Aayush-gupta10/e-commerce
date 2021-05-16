@@ -28,6 +28,8 @@
     }
     ,
     "PRODUCTDETAILS" : {
+        "HOME": "Maison",
+        "ALL": "Tous",
         "PRODUCTDETAILS" : "détails du produit",
         "PRODUCTNAME" : "Nom du produit",
         "PRODUCTDESCRIPTION" : "Description du produit",

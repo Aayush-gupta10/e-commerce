@@ -27,6 +27,8 @@
         "LOGOUT" : "Logout"
     },
     "PRODUCTDETAILS" : {
+        "HOME": "Home",
+        "ALL": "All",
         "PRODUCTDETAILS" : "Product Details",
         "PRODUCTNAME" : "Product Name",
         "PRODUCTDESCRIPTION" : "Product Description",

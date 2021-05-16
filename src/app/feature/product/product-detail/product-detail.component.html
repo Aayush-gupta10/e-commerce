@@ -1,4 +1,11 @@
 <div class="container">
+  <ul class="breadcrumb">
+    <li><a routerLink="/home/product">{{'PRODUCTDETAILS.HOME' | translate}}</a></li>
+    <li><a routerLink="/home/product">{{'PRODUCTDETAILS.ALL' | translate}}</a></li>
+    <li><a routerLink="/home/product">{{product?.category}}</a></li>
+    <li><a routerLink="/home/product">{{product?.subcategory}}</a></li>
+    <li class="active">{{product?.title}}</li>
+  </ul>
     <div class="row">
       <div class="col-sm-4">
         <div class="product-image">
