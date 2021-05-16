@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { ActivatedRoute } from '@angular/router';
 import {TooltipModule} from 'primeng/tooltip';
+import { of } from 'rxjs';
 
 
 @Component({
@@ -39,9 +40,9 @@ export class ProductsListComponent implements OnInit {
 
     this.route.data.subscribe(data => {
       this.productList = data.productList;
+      this.productService.productData$.next(this.productList);
     });
     if (this.category != null) {
-      console.log(this.sub);
       this.productService.getSearchProducts(this.category, this.searchval);
     }
     if (this.category != null && this.sub != null) {

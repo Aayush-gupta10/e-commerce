@@ -28,7 +28,7 @@
                   <span (click) = "Decrease()" class="value-button" id="decrease" class= "fa fa-minus"></span>
                   <span>{{Quantity}}</span>
                   <span (click) = "Increase()" class="value-button" id="increase" class= "fa fa-plus"></span>
-                  <button (click)="addToCart(product.id)" class="btn btn-primary" ><i
+                  <button (click)="addToCart(product.id)" [disabled]="Quantity==0" class="btn btn-primary" ><i
                     class="fa fa-shopping-cart " ></i>  {{  'PRODUCTDETAILS.ADDTOCART' | translate}}
                   </button>
                 </div>

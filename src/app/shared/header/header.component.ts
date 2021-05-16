@@ -157,5 +157,8 @@ export class HeaderComponent implements OnInit {
     this.authService.logout();
     this.router.navigateByUrl('/home/product');
   }
-
+  home(): void
+  {
+    this.productService.getSearchProducts('All', '');
+  }
 }
