@@ -48,7 +48,6 @@ export class CartService {
       // If the cart is empty
       if (prod.quantity - qty >= 0) {
         prod.quantity--;
-        console.log(prod);
         if (this.cartDataServer.data[0].product === undefined) {
           this.cartDataServer.data[0].product = prod;
           this.cartDataServer.data[0].numInCart = qty;

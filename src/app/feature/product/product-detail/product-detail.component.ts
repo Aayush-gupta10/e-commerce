@@ -40,7 +40,6 @@ export class ProductDetailComponent implements OnInit {
     }
   }
   addToCart(id: number): void {
-    console.log('add');
     this.cartService.AddProductToCart(id, this.Quantity);
   }
 

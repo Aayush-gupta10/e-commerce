@@ -48,7 +48,6 @@ export class ShippingdetailsComponent implements OnInit {
   }
   onSubmit(): void
   {
-    console.log(this.shippingform.value);
   }
 
   orderPlaced(): void

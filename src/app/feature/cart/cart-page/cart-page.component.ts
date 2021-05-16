@@ -30,7 +30,6 @@ export class CartPageComponent implements OnInit {
           this.productsInCart = this.productsInCart + ele.numInCart;
         });
     });
-    console.log(JSON.stringify(this.cartProducts));
     this.cartService.cartTotal$.subscribe(total => this.cartTotal = total);
   }
 

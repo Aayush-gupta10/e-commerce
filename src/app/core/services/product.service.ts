@@ -52,8 +52,6 @@ export class ProductService {
   }
 
   getSearchProductsByCategories(categoryValue: string, subcategoryValue: string): void {
-    console.log(categoryValue);
-    console.log(subcategoryValue);
     const url = `${this.PRODUCT_SERVICE_BASE_URL}/productDB.json`;
     this.http.get(url).toPromise().then((res: Product[]) => {
       this.productList = res.filter((product: Product) => product.category.toLocaleLowerCase() === categoryValue.toLocaleLowerCase());

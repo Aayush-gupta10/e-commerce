@@ -17,7 +17,6 @@ export class AuthService {
                 const isLoggedIn: boolean = JSON.parse(localStorage.getItem('isloggedIN'));
                 if (isLoggedIn)
                 {
-                  console.log(isLoggedIn);
                   this.isLoggedIn$.next(isLoggedIn);
                 }
               }

@@ -30,7 +30,6 @@ export class HeaderComponent implements OnInit {
               public authService: AuthService) {
     translate.addLangs(['en', 'fr']);
     translate.setDefaultLang('en');
-    console.log(translate.currentLang);
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
   }
